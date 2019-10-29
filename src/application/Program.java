@@ -22,7 +22,7 @@ public class Program {
 		list.add(new Product("HD Case", 80.90));
 		
 		//list.removeIf( p -> p.getPrice() >= 100); //Expressão lambda com predicado
-		list.removeIf(new ProductPredicate());
+		list.removeIf(Product::staticProductPredicate); //method reference
 		
 		for (Product p : list) {
 			System.out.println(p);
