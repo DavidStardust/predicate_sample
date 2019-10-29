@@ -23,10 +23,8 @@ public class Program {
 		
 		//list.removeIf( p -> p.getPrice() >= 100); //Expressão lambda com predicado
 		double min = 100.0; //em um programa, esse valor pode ser digitado pelo usuário
-		
-		Predicate<Product> pred = p -> p.getPrice() >= min; 
-		
-		list.removeIf(pred);
+				
+		list.removeIf(p -> p.getPrice() >= min);
 		
 		for (Product p : list) {
 			System.out.println(p);
